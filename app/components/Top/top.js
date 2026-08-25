@@ -1,11 +1,12 @@
 import Image from "next/image";
+import SectionTag from "../SectionTag/sectionTag";
 
 export default function Top() {
     return (
         <section id="top">
             <div className="home">
                 <div className="call-to-action">
-                    <p className="impact"><span></span>Da Foto à Memória, sem perder o contexto</p>
+                    <SectionTag name="Da Foto à Memória, sem perder o contexto"/>
                     <h1 className="title">Suas anotações merecem ser</h1>
                     <h1 className="title differ-font">reencontradas</h1>
                     <p className="color-grey">O SnapNote transforma fotos de lousas, cadernos e slides em registros organizados,

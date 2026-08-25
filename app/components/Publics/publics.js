@@ -1,7 +1,10 @@
+import SectionTag from "../SectionTag/sectionTag";
+
 export default function Publico() {
     return (
         <section id="publico" className="public-section">
             <div className="public-phrase">
+                <SectionTag name="Público-Alvo"/>
                 <h2>Feito para quem aprende<br /><span className="differ-font">em Movimento.</span></h2>
                 <p>O SnapNote apoia pessoas que usam o celular para registrar informações importantes e precisam
                     recuperar o significado delas depois.</p>
