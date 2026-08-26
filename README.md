@@ -1,36 +1,108 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SnapNote
 
-## Getting Started
+Landing page do projeto **SnapNote**, migrada de HTML/CSS/JS estático para **React (Next.js)**, com estrutura de componentes reutilizáveis e persistência local de dados.
 
-First, run the development server:
+O SnapNote é a solução desenvolvida para o Challenge, que transforma fotos de lousas, cadernos e slides em registros organizados, pesquisáveis e prontos para revisão.
+
+Deploy: **https://sprint3-web-development.vercel.app/**
+
+---
+
+## Tecnologias utilizadas
+
+- **Next.js 16** (App Router)
+- **React 19**
+- **CSS** puro (`globals.css`, sem framework de estilos)
+- **localStorage** — armazenamento das mensagens enviadas pelo formulário de contato
+- **Math** (`Math.random`, `Math.floor`) — geração de protocolo único para cada mensagem enviada
+- **next/image** — otimização das imagens da galeria e da equipe
+- **ESLint** — padronização de código
+
+---
+
+## Como instalar as dependências
+
+Clone o repositório e instale as dependências com npm:
+
+```bash
+git clone https://github.com/sprints-web-development/sprint3-web-development.git
+cd sprint3-web-development
+npm install
+```
+
+---
+
+## Como executar o projeto
+
+### Ambiente de desenvolvimento
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Acesse **http://localhost:3000** no navegador.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### Build de produção (opcional)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm run start
+```
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## Usuários e senhas de teste
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Este projeto **não possui autenticação**. Todas as seções e funcionalidades (incluindo o formulário de contato) estão acessíveis livremente, sem necessidade de login.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## Uso de Inteligência Artificial no projeto
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+A IA (**Claude, da Anthropic**) foi utilizada como apoio ao longo de todo o desenvolvimento desta sprint, principalmente para:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Revisar a migração da landing page estática para componentes React, apontando inconsistências (ex.: `id` duplicado entre as seções de galeria, ausência de `localStorage`/`Math` nos requisitos técnicos).
+- Ajudar a estruturar o componente `Mensagem`, exibido após o envio do formulário de contato, incluindo a definição de props (`nome`, `protocolo`) e o estilo CSS correspondente (`.contact-success`).
+- Revisar e corrigir bugs reais de lógica no `Contato.js`, como a falta de `return` na função recursiva `generateProtocol` (que gera um protocolo único validando contra mensagens já salvas no `localStorage`) e um bug em que o componente `Mensagem` exibia dados fixos em vez dos dados realmente enviados pelo usuário.
+- Gerar este `README.md`, com base no conteúdo real do projeto (zip enviado à IA), estruturando a documentação de acordo com os itens exigidos pelo enunciado da sprint.
+
+Nenhum trecho de código foi gerado sem revisão manual da equipe — a IA atuou como uma revisora técnica e assistente de escrita, não como autora única do código.
+
+---
+
+## Deploy
+
+**Vercel:** https://sprint3-web-development.vercel.app/
+
+## Repositório
+
+**GitHub:** https://github.com/sprints-web-development/sprint3-web-development
+
+---
+
+## Estrutura do projeto
+
+```
+app/
+├── components/
+│   ├── Header/          # Cabeçalho e menu de navegação
+│   ├── Top/              # Seção hero ("A Solução")
+│   ├── Problem/           # Seção do problema
+│   ├── Solution/          # Explicação da solução
+│   ├── Publics/           # Público-alvo
+│   ├── Galeria/           # Galeria de imagens
+│   ├── Caracteristicas/   # Características / segunda galeria
+│   ├── Time/              # Nossa Equipe (recebe os dados via props)
+│   ├── Contato/           # Formulário de contato (localStorage + Math)
+│   ├── Mensagem/          # Confirmação exibida após o envio do formulário
+│   ├── SectionTag/        # Label reutilizável de cada seção
+│   └── Footer/            # Rodapé
+├── globals.css
+└── page.js                # Monta as seções e passa os dados da equipe via props
+```
+
+---
+
+## Integrantes
+
+Consulte o arquivo `INTEGRANTES.txt` na raiz do projeto.
