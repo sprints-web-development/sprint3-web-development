@@ -1,7 +1,6 @@
-import Image from "next/image";
-
 export default function Caracteristicas() {
     return (
+
         <section id="galeria2" className="galery2-section">
             <div className="galery2-phrase">
                 <h2>Menos tempo procurando.<br /><span className="differ-font">Mais tempo aprendendo.</span></h2>

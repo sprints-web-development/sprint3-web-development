@@ -1,7 +1,27 @@
 import Image from "next/image";
 import SectionTag from "../SectionTag/sectionTag";
+import ImageBorder from "../UI-Components/ImageBorder/ImageBorder";
 
 export default function Galeria() {
+
+    const cards = [
+        {
+            src: "/images/galery/desktop.png",
+            title: "Biblioteca Visual",
+            description: "Interface pensada para ser funcional, rápida e sem distrações."
+        },
+        {
+            src: "/images/galery/cellPhone.png",
+            title: "Lembretes Úteis",
+            description: "O conteúdo certo, na hora certa."
+        },
+        {
+            src: "/images/galery/half.png",
+            title: "Captura Guiada",
+            description: "Um bom registro desde o primeiro clique."
+        }
+    ]
+
     return (
         <section id="galeria" className="galery-section">
             <div className="galery-phrase">
@@ -13,36 +33,9 @@ export default function Galeria() {
             </div>
 
             <div className="galery-images">
-                <div className="image-border">
-                    <Image src="/images/galery/desktop.png" alt="" width={350} height={150} />
-                    <div className="images-subtitles">
-                        <p className="number">01</p>
-                        <div>
-                            <h2>Biblioteca Visual</h2>
-                            <p>Tudo organizado por matérias e contexto.</p>
-                        </div>
-                    </div>
-                </div>
-                <div className="image-border">
-                    <Image src="/images/galery/cellPhone.png" alt="" width={350} height={150} />
-                    <div className="images-subtitles">
-                        <p className="number">02</p>
-                        <div>
-                            <h2>Lembretes Úteis</h2>
-                            <p>O conteúdo certo, na hora certa.</p>
-                        </div>
-                    </div>
-                </div>
-                <div className="image-border">
-                    <Image src="/images/galery/half.png" alt="" width={350} height={150} />
-                    <div className="images-subtitles">
-                        <p className="number">03</p>
-                        <div>
-                            <h2>Captura Guiada</h2>
-                            <p>Um bom registro desde o primeiro clique.</p>
-                        </div>
-                    </div>
-                </div>
+                {cards.map((card, index) => (
+                    <ImageBorder key={index} card={card} index={index + 1}/>
+                ))}
             </div>
 
         </section>

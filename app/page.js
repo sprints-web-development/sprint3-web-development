@@ -5,7 +5,7 @@ import Galeria from "./components/Galeria/galeria";
 import Header from "./components/Header/header";
 import Problem from "./components/Problem/problem";
 import Publico from "./components/Publics/publics";
-import Solution from "./components/Solution/solution";
+import Solution from "./components/UI-Components/Solution/solution";
 import Time from "./components/Time/Time";
 import Top from "./components/Top/top";
 import styles from './globals.css'
