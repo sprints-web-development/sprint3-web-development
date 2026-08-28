@@ -4,7 +4,7 @@ Landing page do projeto **SnapNote**, migrada de HTML/CSS/JS estático para **Re
 
 O SnapNote é a solução desenvolvida para o Challenge, que transforma fotos de lousas, cadernos e slides em registros organizados, pesquisáveis e prontos para revisão.
 
-Deploy: **https://sprint3-web-development.vercel.app/**
+Deploy: **https://snapnote-web-development.vercel.app/**
 
 ---
 
@@ -72,7 +72,7 @@ Nenhum trecho de código foi gerado sem revisão manual da equipe — a IA atuou
 
 ## Deploy
 
-**Vercel:** https://sprint3-web-development.vercel.app/
+**Vercel:** https://snapnote-web-development.vercel.app/
 
 ## Repositório
 
