@@ -5,7 +5,7 @@ export default function MobileMenu({ menuOpen }) {
         <div className={`mobile-menu ${menuOpen ? 'open' : ''}`}>
             <div>
                 <a href="#top">
-                    <Image src="/images/logo-white.png" alt="Logotipo da plataforma SnapNote" width={50} height={50} />
+                    <Image src="/images/logo-white.png" alt="Logotipo do SnapNote" width={50} height={50} />
                 </a>
             </div>
             <ul className="nav-hero-menu">

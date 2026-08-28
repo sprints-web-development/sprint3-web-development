@@ -5,7 +5,7 @@ export default function Footer() {
         <footer className="site-footer">
             <div className="footer-brand">
                 <a href="#top" className="footer-logo">
-                    <Image src="/images/logo.png" alt="Logotipo da plataforma SnapNote" width={50} height={50} />
+                    <Image src="/images/logo.png" alt="Logotipo do SnapNote" width={50} height={50} />
                     <span>Snap<span>Note</span></span>
                 </a>
                 <p>Fotografe. Organize. Reencontre.</p>

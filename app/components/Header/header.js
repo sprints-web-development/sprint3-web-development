@@ -12,7 +12,7 @@ export default function Header() {
     <header className="header-nav">
       <a href="#top">
         <div className="header-logo">
-          <Image src="/images/logo.png" alt="Logotipo da plataforma SnapNote" width={50} height={50} />
+          <Image src="/images/logo.png" alt="Logotipo do SnapNote" width={50} height={50} />
           <p>Snap<span>Note</span></p>
         </div>
       </a>

@@ -12,9 +12,9 @@ export default function Publico() {
             text: "Guardam lousas, exercícios e slides no celular, estudam entre aulas e precisam revisar conteúdos com agilidade.",
             style: 1,
             list: [
-                { text: "Aprendizado Contínuo" },
-                { text: "Referências Espalhadas" },
-                { text: "Conhecimento Compartilhável" }
+                { text: "Rotina Acadêmica Intensa" },
+                { text: "Grande Volume de Registros" },
+                { text: "Busca Rápida antes de Provas" }
             ]
         },
         {

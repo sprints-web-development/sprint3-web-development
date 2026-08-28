@@ -34,7 +34,7 @@ export default function Top() {
                     </div>
                 </div>
                 <div className="interface">
-                    <Image src="/images/prot.png" alt="Grande deslizamento de terra em encosta urbana" width={311} height={595} />
+                    <Image src="/images/prot.png" alt="Protótipo no celular" width={311} height={595} />
                     <div className="blue-circle"></div>
                     <span className="decoration-ideas">ideias</span>
                     <div className="decoration-note">
